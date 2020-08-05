@@ -1,0 +1,322 @@
+/* CSS used here will be applied after bootstrap.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+}
+li {
+    list-style: none;
+}
+
+.top-header {
+    background: #2498cb;
+}
+
+.top-header i {
+    color: #fff;
+}
+
+.top_header_nav {
+    padding: 5px 1px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+button.btn.seaarch-btn.my-2.my-sm-0 {
+    background: #54555a;
+    color: #fff;
+    border-radius: 0px;
+    font-size: 14px;
+}
+
+input.form-control.search-inp {
+    padding: 1px 7px;
+    font-size: 14px;
+    border-radius: 0px;
+}
+
+.jumbotron.jumbotron-fluid.jumbotron-banner {
+    background: url(../images/burger-banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+}
+
+.jumbotron.jumbotron-fluid.thankyou-banner {
+    background: url(../images/thank-you.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}s
+
+.jumbotron.jumbotron-fluid.jumbotron-banner {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+
+.step-object {
+    background: #006e96;
+}
+
+
+.col-sm-4.step-object:before {
+    content: '';
+    height: 100%;
+    top: 0px;
+    background: #006e96;
+    width: 200px;
+    position: absolute;
+    left: -190px;
+}
+
+.col-sm-4.step-object .media-body {
+    color: #fff;
+}
+
+.step-object .media-body h5 {
+  margin-bottom: 5px;
+
+}
+
+.step-object .media-body p {
+  font-size: 14px;
+    font-weight: 200;
+}
+.search-inp {
+    height: 47px;
+    border-radius: 0px;
+}
+
+.srch-btn {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(45px + 2px) !important;
+    border-radius: 0;
+    background: #006e96;
+    color: #fff;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+section.step-section.step-one {
+    background: #fbf7f8;
+}
+.hotel_search_form {
+    padding: 4rem 1rem 4rem 2rem;
+}
+
+.btn_group {
+  padding-top: 3em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.btn_group>input {
+    margin: 2px;
+    width: 25%;
+}
+
+section.step-section.step-one {
+    border-bottom: 1px solid #002b49;
+}
+
+section.step-section.step-one.step-two .step-object {
+    background: #002b49;
+}
+.booking_details.p-4 p {
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #002b49;
+}
+
+
+section.step-section.step-one.step-two .step-object:before {
+  content:'';
+    background: #002b49;
+}
+
+
+section.step-section.step-one.step-two  button.btn.srch-btn  {
+  background: #002b49;
+}
+
+section.step-section.step-one.step-two span.input-group-text.srch-btn , section.step-section.step-one.step-two input.btn.srch-btn{
+  background: #002b49;
+}
+
+
+.media.py-5:before {
+    content: "";
+    position: absolute;
+    left: 45px;
+    top: 0px;
+    bottom: 0;
+    border: 1px dotted;
+    border-width: 0px 0px 0px 2px;
+    color: aliceblue;
+    height: 69px;
+}
+
+.media.py-5:after {
+    content: "";
+    position: absolute;
+    left: 45px;
+    top: 120px;
+    bottom: 0;
+    border: 1px dotted;
+    border-width: 0px 0px 0px 2px;
+    color: aliceblue;
+}
+.booking_details.p-4 {
+    background: #fff;
+}
+
+
+
+section.step-section.step-one.step-four .step-object {
+    background: #00b4e3;
+}
+
+section.step-section.step-one.step-four .step-object:before {
+    content: '';
+    background: #00b4e3;
+
+}
+
+.booking_details.p-4 h4 {
+    color: #00b4e3;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.booking-div {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+
+button.btn.book-btn.btn-danger, button.btn.book-btn.btn-success {
+    width: 125px;
+    margin-right: 5px;
+}
+
+
+button.btn.book-btn{
+width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(45px + 2px) !important;
+    border-radius: 0;
+    color: #fff;
+
+    }
+
+.footer-div {
+    background: #002b49;
+    padding: 60px 0px 30px;
+}
+
+.ul-footer h5 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+ul.ul-links li a {
+    color: #eee;
+    font-size: 12px;
+}
+
+.ul-footer h5:before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    background: #fff;
+    margin-top: 26px;
+}
+
+ul.ul-links {
+    padding: 0px;
+}
+
+.ul-footer p {
+    font-size: 12px;
+    color: #bfbfbf;
+}
+
+.banner-btn {
+    margin-top: 20px;
+}
+
+a.btn.banner-btn {
+    background: #0069b3;
+    border-radius: 0px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 10px 20px;
+}
+
+a.btn.banner-btn:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #0069b3;
+    margin-top: -11px;
+    margin-left: 21px;
+}
+
