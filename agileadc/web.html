@@ -114,7 +114,7 @@
 									<div class="serch_form">
 										<form>
 											<div class="input-group mb-3">
-											  <input type="text" class="form-control search-inp" name="" placeholder="Search">
+											  <input type="text" class="form-control search-inp" name="search" id="search" placeholder="Search">
 											  <div class="input-group-append">
 											     <button type="button" class="btn  srch-btn">Quick Search</button>
 											  </div>
@@ -125,8 +125,8 @@
 								<div class="col-sm-6">
 									<form>
 										<div class="input-group mb-3">
-										  <select class="custom-select search-inp">
-										    <option selected>Choose...</option>
+										  <select class="custom-select search-inp" name="seltist" id="sellist">
+										    <option value="none" selected>Choose...</option>
 										    <option value="1">One</option>
 										    <option value="2">Two</option>
 										    <option value="3">Three</option>
@@ -137,7 +137,7 @@
 										</div>
 										<div class="btn_group">
 										  	<input type="button" class="btn srch-btn" value="Save">
-  											<input type="submit" class="btn srch-btn" value="Submit">
+  											<input type="button" class="btn srch-btn" id="step1submit" value="Submit">
 										</div>
 									</form>
 
@@ -149,7 +149,7 @@
 			</div>
 		</section>
 		
-		<section class="step-section step-one step-two">
+		<section class="step-section step-one step-two" style="display: none">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 step-object pt-3">
@@ -170,7 +170,7 @@
 										<form>
 											<div class="input-group mb-3">
 												<div class="input-group mb-3">
-												  <input type="text" class="form-control search-inp" name="" placeholder="Search">
+												  <input type="text" class="form-control search-inp" name="search2" id="search2" placeholder="Search">
 												  <div class="input-group-append">
 												     <button type="button" class="btn  srch-btn">Quick Search</button>
 												  </div>
@@ -182,8 +182,8 @@
 								<div class="col-sm-6">
 									<form>
 										<div class="input-group mb-3">
-										  <select class="custom-select search-inp">
-										    <option selected>Choose...</option>
+										  <select class="custom-select search-inp" name="sellist2" id="sellist2">
+										    <option value="none" selected>Choose...</option>
 										    <option value="1">One</option>
 										    <option value="2">Two</option>
 										    <option value="3">Three</option>
@@ -194,7 +194,7 @@
 										</div>
 										<div class="btn_group">
 										  	<input type="button" class="btn srch-btn" value="Save">
-  											<input type="submit" class="btn srch-btn" value="Submit">
+  											<input type="button" class="btn srch-btn" id="step2submit" value="Submit">
 										</div>
 									</form>
 
@@ -206,7 +206,7 @@
 			</div>
 		</section>
 		
-		<section class="step-section step-one step-three">
+		<section class="step-section step-one step-three" style="display: none">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 step-object pt-3">
@@ -227,7 +227,7 @@
 										<form>
 											<div class="input-group mb-3">
 												<div class="input-group mb-3">
-												  <input type="text" class="form-control search-inp" name="" placeholder="Search">
+												  <input type="text" class="form-control search-inp" name="search3" id="search3" placeholder="Search">
 												  <div class="input-group-append">
 												     <button type="button" class="btn  srch-btn">Quick Search</button>
 												  </div>
@@ -239,8 +239,8 @@
 								<div class="col-sm-6">
 									<form>
 										<div class="input-group mb-3">
-										  <select class="custom-select search-inp">
-										    <option selected>Choose...</option>
+										  <select class="custom-select search-inp" name="sellist3" id="sellist3">
+										    <option value="none" selected>Choose...</option>
 										    <option value="1">One</option>
 										    <option value="2">Two</option>
 										    <option value="3">Three</option>
@@ -251,7 +251,7 @@
 										</div>
 										<div class="btn_group">
 										  	<input type="button" class="btn srch-btn" value="Save">
-  											<input type="submit" class="btn srch-btn" value="Submit">
+  											<input type="button" class="btn srch-btn" id="step3submit" value="Submit">
 										</div>
 									</form>
 
@@ -263,7 +263,7 @@
 			</div>
 		</section>
 
-		<section class="step-section step-one step-four">
+		<section class="step-section step-one step-four" style="display: none">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 step-object pt-3">
@@ -291,13 +291,12 @@
 								</div>
 								<div class="col-sm-6">
 									<div class="booking-div">
-										<form>										
+																				
 											<div class="booking-btn">
 												<button class="btn book-btn btn-danger">Edit Booking</button>
-												<button class="btn book-btn btn-success">Confirm Booking</button>
-											  	
+												<button class="btn book-btn btn-success" id="myButton" type="submit" >Confirm Booking</button>
 											</div>
-										</form>
+										
 									</div>
 
 								</div>
@@ -307,6 +306,8 @@
 				</div>
 			</div>
 		</section>
+
+
 		<footer>
 			<div class="footer-div">
 				<div class="container">
@@ -369,6 +370,73 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
+////step1submit
+$(document).on('click', '#step1submit', function(){
+
+	if($('#search').val() == '') {
+		alert('Search input is required');
+		return false;
+	}
+
+	if($('#sellist').val() == 'none') {
+		alert('Select List is required');
+		return false;
+	}
+
+	$('.step-two').css('display','block');
+
+
+
+});
+
+////step2submit
+$(document).on('click', '#step2submit', function(){
+
+	if($('#search2').val() == '') {
+		alert('Search input is required');
+		return false;
+	}
+
+	if($('#sellist2').val() == 'none') {
+		alert('Select List is required');
+		return false;
+	}
+
+	$('.step-three').css('display','block');
+
+
+
+});
+
+
+////step3submit
+$(document).on('click', '#step3submit', function(){
+
+	if($('#search3').val() == '') {
+		alert('Search input is required');
+		return false;
+	}
+
+	if($('#sellist3').val() == 'none') {
+		alert('Select List is required');
+		return false;
+	}
+
+	$('.step-four').css('display','block');
+
+
+
+});
+
+
+</script>
+
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "thank_you.html";
+    };
 </script>
 
 
