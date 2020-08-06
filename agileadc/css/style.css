@@ -74,6 +74,7 @@ input.form-control.search-inp {
     background-size: cover;
     background-position: center;
     height: 550px;
+    margin: 0px;
 }
 
 .jumbotron.jumbotron-fluid.thankyou-banner {
@@ -91,7 +92,9 @@ input.form-control.search-inp {
     color: #fff;
     margin-bottom: 0px;
 }
-
+.jumbotron.jumbotron-fluid.jumbotron-banner h1 {
+    color: #f8f9fa;
+}
 
 .step-object {
     background: #006e96;
